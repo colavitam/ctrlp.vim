@@ -977,8 +977,8 @@ fu! s:MapNorms()
 	let pcmd = "nn \<buffer> \<silent> \<k%s> :\<c-u>cal \<SID>%s(\"%s\")\<cr>"
 	let cmd = substitute(pcmd, 'k%s', 'char-%d', '')
 	let pfunc = 'PrtFocusMap'
-	let ranges = [32, 33, 125, 126] + range(35, 91) + range(93, 123)
-	for each in [34, 92, 124]
+	let ranges = [64, 90, 208, 161, 189] + range(129,137) + range(145,153) + range(162,163) + range(193,201) + range(209,217) + range(226,233) + [123, 91, 108, 80, 125, 77, 93, 92, 78, 107, 96, 78, 97, 122, 94, 76, 110, 126, 111, 124]
+	for each in [127, 79, 224]
 		exe printf(cmd, each, pfunc, escape(nr2char(each), '"|\'))
 	endfo
 	for each in ranges
